@@ -4,6 +4,6 @@ draft = false
 title = 'My First Post'
 +++
 
-# Už to ide
+# Už to ide snáď
 
 All my fellas
