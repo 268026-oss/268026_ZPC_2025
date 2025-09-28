@@ -1,4 +1,48 @@
 baseURL = 'https://example.org/'
 languageCode = 'cz-cs'
 title = 'ZPC projekt'
-theme = "ananke"
+theme = "PaperMod"
+
+[params]
+  ShowPostList = false
+
+  [params.homeInfoParams]
+    Title = "ZPC Projekt 2025"
+    Content = """
+    O tomto kurze:
+    V kurze je pripravených 5 mini-projektov, ktoré musíme spracovať. Týkajú sa najmä o návrhu, dizajnu, vyhotovenia, spracovania a dokumentácii celého postupu. Taktiež je zadaný jeden semestrálny projekt kde sa kombinujú všetky nabudnuté znalosti z tohto a iných predmetov. Vo výuke sú zahrnuté tieto body: 
+    návrh 2D a 3D dát 
+    laserové rezanie, rezanie vinylových fólií, 3D skenovanie, 3D tlač, finišovanie 
+    základy elektroniky, senzoriky a programovania mikrokontrolerov
+    dokumentácia vlastných projektov
+    Cieľom predmetu je:
+    Rozvíjať kreativitu a praktické zručnosti pri návrhu a výrobe prototypov v multidisciplinárnom prostredí.
+    Kombinovať mechanické, elektronické aj softvérové prvky pri tvorbe funkčných systémov.
+    Podporovať tímovú spoluprácu aj individuálnu prácu.
+    """
+
+[[menu.main]]
+identifier = "projects"
+name = "Projects"
+url = "/projects/"
+weight = 3
+
+[menu]
+
+  [[menu.main]]
+  identifier = "home"
+  name = "Home"
+  url = "/"
+  weight = 1
+
+  [[menu.main]]
+  identifier = "about"
+  name = "About Me"
+  url = "/about/"
+  weight = 2
+
+  [[menu.main]]
+  identifier = "projects"
+  name = "Projects"
+  url = "/projects/"
+  weight = 3
