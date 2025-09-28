@@ -13,7 +13,10 @@
       <link>https://example.org/projects/project2/</link>
       <pubDate>Sun, 28 Sep 2025 19:52:30 +0200</pubDate>
       <guid>https://example.org/projects/project2/</guid>
-      <description>&lt;h1 id=&#34;mini-projekt-realizovaný-pomocou-vinylovej-rezačky-nebo-rezacieho-ploteru&#34;&gt;Mini projekt realizovaný pomocou vinylovej rezačky nebo rezacieho ploteru&lt;/h1&gt;</description>
+      <description>&lt;h1 id=&#34;mini-projekt-realizovaný-pomocou-vinylovej-rezačky-nebo-rezacieho-ploteru&#34;&gt;Mini projekt realizovaný pomocou vinylovej rezačky nebo rezacieho ploteru&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     <item>
       <title>Projekt 1</title>

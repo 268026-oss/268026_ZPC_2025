@@ -5,3 +5,5 @@ title = 'Projekt 2'
 +++
 
 # Mini projekt realizovaný pomocou vinylovej rezačky nebo rezacieho ploteru
+
+-
