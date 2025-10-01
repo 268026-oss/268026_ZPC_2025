@@ -2,36 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>ZPC projekt</title>
-    <link>https://example.org/</link>
+    <link>https://268026-oss.github.io/268026_ZPC_2025/</link>
     <description>Recent content on ZPC projekt</description>
     <generator>Hugo -- 0.148.2</generator>
     <language>cz-cs</language>
     <lastBuildDate>Sun, 28 Sep 2025 19:52:30 +0200</lastBuildDate>
-    <atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://268026-oss.github.io/268026_ZPC_2025/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mini-projekt 2</title>
-      <link>https://example.org/projects/project2/</link>
+      <link>https://268026-oss.github.io/268026_ZPC_2025/projects/project2/</link>
       <pubDate>Sun, 28 Sep 2025 19:52:30 +0200</pubDate>
-      <guid>https://example.org/projects/project2/</guid>
+      <guid>https://268026-oss.github.io/268026_ZPC_2025/projects/project2/</guid>
       <description>&lt;h1 id=&#34;mini-projekt-realizovaný-pomocou-vinylovej-rezačky-nebo-rezacieho-plotteru&#34;&gt;Mini projekt realizovaný pomocou vinylovej rezačky nebo rezacieho plotteru&lt;/h1&gt;
 &lt;p&gt;    Zadanie č.2 spočívalo v tom naučiť sa robiť s plotterom. Plotter je v podstate automatizovaná rezačka s nožom, ktorá dokáže vyrezávať rôzne tvary s rôznych materiálov. Ako materiál sme používali vynilovú fóliu, ale plotter dokáže rezať aj iné špeciálne fólie (na textil, reflexné a podobne) a dokonca aj kartóny a papier.&lt;/p&gt;
 &lt;p&gt;Prvým krokom bolo nainštalovanie programu Inkscape, v ktorom sme si mali vytvoriť obrázok alebo logo, ktoré si vyrežeme. Ukázali sme si základné funkcie a vytvorili obrázky a logá.
 Fotka programu:
-&lt;img alt=&#34;Program Foto&#34; loading=&#34;lazy&#34; src=&#34;https://example.org/images/programfoto.jpg&#34;&gt;&lt;/p&gt;</description>
+&lt;img alt=&#34;Program Foto&#34; loading=&#34;lazy&#34; src=&#34;https://268026-oss.github.io/268026_ZPC_2025/images/programfoto.jpg&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Semestrálny projekt</title>
-      <link>https://example.org/projects/projektsemester/</link>
+      <link>https://268026-oss.github.io/268026_ZPC_2025/projects/projektsemester/</link>
       <pubDate>Sun, 28 Sep 2025 19:52:30 +0200</pubDate>
-      <guid>https://example.org/projects/projektsemester/</guid>
+      <guid>https://268026-oss.github.io/268026_ZPC_2025/projects/projektsemester/</guid>
       <description>&lt;p&gt;    V rámci výuky je aj semestrálny projekt. Tému pre tento projekt si volíme sami na základe tématiky Jak vyrobit (téměř) cokoliv - How to make (almost) anything. Tento projekt by mal obsahovať prvky 3D tlače, laserového rezania a elektroniky (arduino).&lt;/p&gt;
 &lt;p&gt;    Ja som si za tému zvolil systém pre elektronické terče. Ide o systém, ktorý bude riadiť svetlá (červené a zelené) na terčoch a bude tým signalizovať kedy strelci majú strielať a kedy nie. Bude sa to využívať najmä pri rýchlopalných disciplínach kedy majú strelci len pár sekúnd na výstrel. Okrem prepínania svetiel bude mať systém aj rozpoznávanie neplatného výstrelu - ak bude výstrel mimo času, kedy je povolený (mimo zelené svetlo).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Mini-projekt 1</title>
-      <link>https://example.org/projects/project1/</link>
+      <link>https://268026-oss.github.io/268026_ZPC_2025/projects/project1/</link>
       <pubDate>Sun, 28 Sep 2025 19:52:26 +0200</pubDate>
-      <guid>https://example.org/projects/project1/</guid>
+      <guid>https://268026-oss.github.io/268026_ZPC_2025/projects/project1/</guid>
       <description>&lt;h1 id=&#34;vytvorba-webovej-stránky-s-portfóliom&#34;&gt;Vytvorba webovej stránky s portfóliom&lt;/h1&gt;
 &lt;p&gt;Prvým zadaním bolo vytvoriť webovú stránku kde budeme postovať naše projekty.&lt;/p&gt;
 &lt;p&gt;    Táto webová stránka je vytvorená pomocou Huga, čo je statický generátor stránok. Stránka sa upravuje pomocou kódu vo visual studiu, kde sa dá všetko nastavovať a spravovať podľa potreby. Web je nahraný na GitHub Pages, je to kvôli tomu aby bol dostupný online a taktiež aby bola dostupná moja dokumentácia počas celého semestra.&lt;/p&gt;
