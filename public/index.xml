@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Vitajte na mojej stránke! on ZPC projekt</title>
+    <link>https://268026-oss.github.io/268026_ZPC_2025/</link>
+    <description>Recent content in Vitajte na mojej stránke! on ZPC projekt</description>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>cz-cs</language>
+    <lastBuildDate>Sun, 28 Sep 2025 19:52:30 +0200</lastBuildDate>
+    <atom:link href="https://268026-oss.github.io/268026_ZPC_2025/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Semestrálny projekt</title>
+      <link>https://268026-oss.github.io/268026_ZPC_2025/projects/projektsemester/</link>
+      <pubDate>Sun, 28 Sep 2025 19:52:30 +0200</pubDate>
+      <guid>https://268026-oss.github.io/268026_ZPC_2025/projects/projektsemester/</guid>
+      <description>&lt;p&gt;    V rámci výuky je aj semestrálny projekt. Tému pre tento projekt si volíme sami na základe tématiky Jak vyrobit (téměř) cokoliv - How to make (almost) anything. Tento projekt by mal obsahovať prvky 3D tlače, laserového rezania a elektroniky (arduino).&lt;/p&gt;
+&lt;p&gt;    Ja som si za tému zvolil systém pre elektronické terče. Ide o systém, ktorý bude riadiť svetlá (červené a zelené) na terčoch a bude tým signalizovať kedy strelci majú strielať a kedy nie. Bude sa to využívať najmä pri rýchlopalných disciplínach kedy majú strelci len pár sekúnd na výstrel. Okrem prepínania svetiel bude mať systém aj rozpoznávanie neplatného výstrelu - ak bude výstrel mimo času, kedy je povolený (mimo zelené svetlo).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mini-projekt 1 - Web stránka</title>
+      <link>https://268026-oss.github.io/268026_ZPC_2025/projects/project1/</link>
+      <pubDate>Sun, 28 Sep 2025 19:52:26 +0200</pubDate>
+      <guid>https://268026-oss.github.io/268026_ZPC_2025/projects/project1/</guid>
+      <description>&lt;h1 id=&#34;vytvorba-webovej-stránky-s-portfóliom&#34;&gt;Vytvorba webovej stránky s portfóliom&lt;/h1&gt;
+&lt;p&gt;Prvým zadaním bolo vytvoriť webovú stránku kde budeme postovať naše projekty.&lt;/p&gt;
+&lt;p&gt;    Táto webová stránka je vytvorená pomocou Huga, čo je statický generátor stránok. Stránka sa upravuje pomocou kódu vo visual studiu, kde sa dá všetko nastavovať a spravovať podľa potreby. Web je nahraný na GitHub Pages, je to kvôli tomu aby bol dostupný online a taktiež aby bola dostupná moja dokumentácia počas celého semestra.&lt;/p&gt;
+&lt;p&gt;    Bolo to celkom náročné, keďže programovanie sme doteraz v rámmci výuky nemali, preto bolo nutné si niektoré infromácie dohľadať a dokonca si pozrieť zopár tutoriálov.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mini-projekt 2 - Plotter</title>
+      <link>https://268026-oss.github.io/268026_ZPC_2025/projects/project2/</link>
+      <pubDate>Sun, 28 Sep 2025 19:52:30 +0200</pubDate>
+      <guid>https://268026-oss.github.io/268026_ZPC_2025/projects/project2/</guid>
+      <description>&lt;h1 id=&#34;mini-projekt-realizovaný-pomocou-vinylovej-rezačky-rezacieho-plotteru&#34;&gt;Mini projekt realizovaný pomocou vinylovej rezačky (rezacieho plotteru)&lt;/h1&gt;
+&lt;p&gt;    Zadanie č.2 spočívalo v tom naučiť sa robiť s plotterom. Plotter je v podstate automatizovaná rezačka s nožom, ktorá dokáže vyrezávať rôzne tvary s rôznych materiálov. Ako materiál sme používali vynilovú fóliu, ale plotter dokáže rezať aj iné špeciálne fólie (na textil, reflexné, maskovacie) a dokonca aj kartóny, papier a magnetické fólie.&lt;/p&gt;
+&lt;p&gt;    Prvým krokom bolo nainštalovanie programu Inkscape, v ktorom sme si mali vytvoriť obrázok alebo logo, ktoré si vyrežeme. Tento program má tú výhodu, že sa v ňom dokáže ľahko vytvoriť obrys obrázku, čo je dôležité pri rezaní (nôž plottera bude rezať po líniach). Ukázali sme si základné funkcie a vytvorili obrázky a logá. Dôležitou funkciou programu Inkscape je, že sa v ňom dajú definovať línie (obrysy). Bez toho by rezačka nevedela ako má rezať. Finálny tvar sa ukladá do formátu .svg.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mini-projekt 3 - Laserová rezačka</title>
+      <link>https://268026-oss.github.io/268026_ZPC_2025/projects/project3/</link>
+      <pubDate>Sun, 28 Sep 2025 19:52:30 +0200</pubDate>
+      <guid>https://268026-oss.github.io/268026_ZPC_2025/projects/project3/</guid>
+      <description>&lt;h1 id=&#34;mini-projekt-s-využitím-laserovej-rezačky&#34;&gt;Mini projekt s využitím laserovej rezačky&lt;/h1&gt;
+&lt;p&gt;    Zadanie pre tento projekt znelo celkom jednoducho: vytvoriť nejaký objekt vyrezaním kartónu a bez lepenia. Bol tu však problém. Čo vytvoriť? Pri tomto projekte bolo nutné zapojiť nie len naše zručnosti a vedomosti, ale aj kreativitu. Pôvodne som chcel vytvoriť malý stôl ktorý by som zložil dokopy. Tento nápad mi však prišiel celkom nudný a nezaujímavý, preto som hľadaľ inšpiráciu na internete. Nakoniec som sa rozhodol vytvoriť si malé autíčko.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mini-projekt 4 - 3D skenovanie</title>
+      <link>https://268026-oss.github.io/268026_ZPC_2025/projects/project4/</link>
+      <pubDate>Sun, 28 Sep 2025 19:52:30 +0200</pubDate>
+      <guid>https://268026-oss.github.io/268026_ZPC_2025/projects/project4/</guid>
+      <description>&lt;h1 id=&#34;mini-projekt-na-3d-skenovanie-pomocou-simscan&#34;&gt;Mini projekt na 3D skenovanie pomocou Simscan&lt;/h1&gt;
+&lt;p&gt;    Jedná sa o skener SimScan ktorý funguje na princípe bez-kontaktnej metódy merania, ktorá vytvára presný digitálny 3D model fyzického objektu. Využíva laserové čiary a kamerové senzory, ktoré sledujú odraz laserového svetla z povrchu objektu. Na základe triangulácie (trojuholníkového výpočtu medzi laserom, kamerou a objektom) sa určuje presná poloha bodov na povrchu.&lt;/p&gt;
+&lt;p&gt;SimScan poskytuje:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;presnosť až 0,02 mm&lt;/li&gt;
+&lt;li&gt;vysokú rýchlosť zbierania bodov&lt;/li&gt;
+&lt;li&gt;použiteľnosť na mierne lesklé aj tmavé povrchy&lt;/li&gt;
+&lt;li&gt;kompaktné rozmery vhodné pre ručné skenovanie malých až stredne veľkých objektov&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;postup-skenovania&#34;&gt;Postup skenovania:&lt;/h2&gt;
+&lt;p&gt;    Prvým krokom bolo skener rozložiť, zapojiť a všetko nastaviť podľa inštrukcií. Potom som otvoril program DefinSight a spustil kalibáciu, ktorá sa vykonáva pomocou kalibracnej dosky. Po kalibrácii bolo na rade skenovanie reflexných bodov. Mojim zadaným objektom bola sklenená fľaša od piva. Nalepil som na ňu reflexné body (6mm) na rôznych miestach tak aby boli viditeľné vždy aspoň 2 body a položil ju na skenovaciu dosku a začal so zbieraním bodov. Keď som mal všetky body dôkladne pozbierané tak som vytvoril pomocou označenia bodov na skenovacej rovnej doske.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mini-projekt 5 - 3D tlač</title>
+      <link>https://268026-oss.github.io/268026_ZPC_2025/projects/project5/</link>
+      <pubDate>Sun, 28 Sep 2025 19:52:30 +0200</pubDate>
+      <guid>https://268026-oss.github.io/268026_ZPC_2025/projects/project5/</guid>
+      <description>&lt;h1 id=&#34;mini-projekt-na-3d-tlač&#34;&gt;Mini projekt na 3D tlač&lt;/h1&gt;
+&lt;p&gt;    Zadaním tohoto projektu bolo vytvoriť mechanizmus s minimalne jedným uložením s presahom a jedným uložením na voľno. Následne bolo potrebné tento mechanizmus vytlačiť na 3D tlačiarňach a zložiť. Podmienkou bolo využiť do 100g filamentu.&lt;/p&gt;
+&lt;p&gt;    Ja som sa rozhodol vytvoriť zmenšeninu spaľovacieho 12 valcového motora. Motor by mal kľukový mechanizmus s piestami, ojnicami a kľukovou hriadeľou. Zároveň som chcel prepojiť tento projekt s následujúcim projektom o elektronike a to tak, že by sa motor otáčal s pomocou elektroniky (viac o tejto téme v miniprojekte 6).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mini-projekt 6 - Arduino/elektronika</title>
+      <link>https://268026-oss.github.io/268026_ZPC_2025/projects/project6/</link>
+      <pubDate>Sun, 28 Sep 2025 19:52:30 +0200</pubDate>
+      <guid>https://268026-oss.github.io/268026_ZPC_2025/projects/project6/</guid>
+      <description>&lt;h1 id=&#34;mini-projekt-zameraný-na-elektroniku-a-programovanie-arduina&#34;&gt;Mini projekt zameraný na elektroniku a programovanie Arduina&lt;/h1&gt;
+&lt;p&gt;    Zadaním tohoto projektu bolo vytvoriť jednoduchý program, ktorý bude vykonávať nejakú funkciu. Ja som sa rozhodol tento projekt skombinovať s mini-projektom 5 - 3D tlač. Plánoval som poháňať môj vytlačený 12 valcový model spaľovacieho motora pomocou elektromotora. Taktiež som chcel aby bolo možné regulovať jeho otáčky a aby sa zobrazovali na displeji.&lt;/p&gt;
+&lt;h2 id=&#34;komponenty&#34;&gt;Komponenty:&lt;/h2&gt;
+&lt;p&gt;Na tento projekt som využil tieto súčiastky:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;krokový motor typu NEMA17&lt;/li&gt;
+&lt;li&gt;riadiaca doska pre krokové motory (Mikrostep driver)&lt;/li&gt;
+&lt;li&gt;Arduino uno&lt;/li&gt;
+&lt;li&gt;LCD displej bez nadstavby (shieldu)&lt;/li&gt;
+&lt;li&gt;2x rotačný enkóder typu KY-040&lt;/li&gt;
+&lt;li&gt;napájací zdroj 24V - pre driver a krokový motor&lt;/li&gt;
+&lt;li&gt;rezistory - 220 Ohm, 1k Ohm, 10k Ohm&lt;/li&gt;
+&lt;li&gt;vodiče (drôty)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;zapojenie&#34;&gt;Zapojenie:&lt;/h2&gt;
+&lt;p&gt;    V tejto časti budem vysvetľovať zapojenie. Schému som vytvoril na stránke &lt;a href=&#34;https://app.cirkitdesigner.com&#34;&gt;https://app.cirkitdesigner.com&lt;/a&gt;. Túto stránku som zvolil preto, lebo mala dostupné presnie tie elektrické komponenty, ktoré som použil.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

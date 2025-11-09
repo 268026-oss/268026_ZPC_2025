@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head>
+<link rel="stylesheet" href="/268026_ZPC_2025/css/custom.min.c526baba39eb02a31ec853855ee4d4232e29204d1ef595f8b8422bddc14de54d.css">
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Mini-projekt 6 - Arduino/elektronika | ZPC projekt</title>
+<meta name="keywords" content="">
+<meta name="description" content="Mini projekt zameraný na elektroniku a programovanie Arduina
+    Zadaním tohoto projektu bolo vytvoriť jednoduchý program, ktorý bude vykonávať nejakú funkciu. Ja som sa rozhodol tento projekt skombinovať s mini-projektom 5 - 3D tlač. Plánoval som poháňať môj vytlačený 12 valcový model spaľovacieho motora pomocou elektromotora. Taktiež som chcel aby bolo možné regulovať jeho otáčky a aby sa zobrazovali na displeji.
+Komponenty:
+Na tento projekt som využil tieto súčiastky:
+
+krokový motor typu NEMA17
+riadiaca doska pre krokové motory (Mikrostep driver)
+Arduino uno
+LCD displej bez nadstavby (shieldu)
+2x rotačný enkóder typu KY-040
+napájací zdroj 24V - pre driver a krokový motor
+rezistory - 220 Ohm, 1k Ohm, 10k Ohm
+vodiče (drôty)
+
+Zapojenie:
+    V tejto časti budem vysvetľovať zapojenie. Schému som vytvoril na stránke https://app.cirkitdesigner.com. Túto stránku som zvolil preto, lebo mala dostupné presnie tie elektrické komponenty, ktoré som použil.">
+<meta name="author" content="">
+<link rel="canonical" href="https://268026-oss.github.io/268026_ZPC_2025/projects/project6/">
+<link crossorigin="anonymous" href="/268026_ZPC_2025/assets/css/stylesheet.2d0325420c619a782224fbdbc50e6417d66f71c30e5607ad7ddb5b0ecce5d6cc.css" integrity="sha256-LQMlQgxhmngiJPvbxQ5kF9ZvccMOVgetfdtbDszl1sw=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://268026-oss.github.io/268026_ZPC_2025/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://268026-oss.github.io/268026_ZPC_2025/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://268026-oss.github.io/268026_ZPC_2025/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://268026-oss.github.io/268026_ZPC_2025/apple-touch-icon.png">
+<link rel="mask-icon" href="https://268026-oss.github.io/268026_ZPC_2025/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://268026-oss.github.io/268026_ZPC_2025/projects/project6/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://268026-oss.github.io/268026_ZPC_2025/projects/project6/">
+  <meta property="og:site_name" content="ZPC projekt">
+  <meta property="og:title" content="Mini-projekt 6 - Arduino/elektronika">
+  <meta property="og:description" content="Mini projekt zameraný na elektroniku a programovanie Arduina Zadaním tohoto projektu bolo vytvoriť jednoduchý program, ktorý bude vykonávať nejakú funkciu. Ja som sa rozhodol tento projekt skombinovať s mini-projektom 5 - 3D tlač. Plánoval som poháňať môj vytlačený 12 valcový model spaľovacieho motora pomocou elektromotora. Taktiež som chcel aby bolo možné regulovať jeho otáčky a aby sa zobrazovali na displeji.
+Komponenty: Na tento projekt som využil tieto súčiastky:
+krokový motor typu NEMA17 riadiaca doska pre krokové motory (Mikrostep driver) Arduino uno LCD displej bez nadstavby (shieldu) 2x rotačný enkóder typu KY-040 napájací zdroj 24V - pre driver a krokový motor rezistory - 220 Ohm, 1k Ohm, 10k Ohm vodiče (drôty) Zapojenie: V tejto časti budem vysvetľovať zapojenie. Schému som vytvoril na stránke https://app.cirkitdesigner.com. Túto stránku som zvolil preto, lebo mala dostupné presnie tie elektrické komponenty, ktoré som použil.">
+  <meta property="og:locale" content="cz-cs">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="projects">
+    <meta property="article:published_time" content="2025-09-28T19:52:30+02:00">
+    <meta property="article:modified_time" content="2025-09-28T19:52:30+02:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mini-projekt 6 - Arduino/elektronika">
+<meta name="twitter:description" content="Mini projekt zameraný na elektroniku a programovanie Arduina
+    Zadaním tohoto projektu bolo vytvoriť jednoduchý program, ktorý bude vykonávať nejakú funkciu. Ja som sa rozhodol tento projekt skombinovať s mini-projektom 5 - 3D tlač. Plánoval som poháňať môj vytlačený 12 valcový model spaľovacieho motora pomocou elektromotora. Taktiež som chcel aby bolo možné regulovať jeho otáčky a aby sa zobrazovali na displeji.
+Komponenty:
+Na tento projekt som využil tieto súčiastky:
+
+krokový motor typu NEMA17
+riadiaca doska pre krokové motory (Mikrostep driver)
+Arduino uno
+LCD displej bez nadstavby (shieldu)
+2x rotačný enkóder typu KY-040
+napájací zdroj 24V - pre driver a krokový motor
+rezistory - 220 Ohm, 1k Ohm, 10k Ohm
+vodiče (drôty)
+
+Zapojenie:
+    V tejto časti budem vysvetľovať zapojenie. Schému som vytvoril na stránke https://app.cirkitdesigner.com. Túto stránku som zvolil preto, lebo mala dostupné presnie tie elektrické komponenty, ktoré som použil.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Projekty",
+      "item": "https://268026-oss.github.io/268026_ZPC_2025/projects/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Mini-projekt 6 - Arduino/elektronika",
+      "item": "https://268026-oss.github.io/268026_ZPC_2025/projects/project6/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Mini-projekt 6 - Arduino/elektronika",
+  "name": "Mini-projekt 6 - Arduino\/elektronika",
+  "description": "Mini projekt zameraný na elektroniku a programovanie Arduina Zadaním tohoto projektu bolo vytvoriť jednoduchý program, ktorý bude vykonávať nejakú funkciu. Ja som sa rozhodol tento projekt skombinovať s mini-projektom 5 - 3D tlač. Plánoval som poháňať môj vytlačený 12 valcový model spaľovacieho motora pomocou elektromotora. Taktiež som chcel aby bolo možné regulovať jeho otáčky a aby sa zobrazovali na displeji.\nKomponenty: Na tento projekt som využil tieto súčiastky:\nkrokový motor typu NEMA17 riadiaca doska pre krokové motory (Mikrostep driver) Arduino uno LCD displej bez nadstavby (shieldu) 2x rotačný enkóder typu KY-040 napájací zdroj 24V - pre driver a krokový motor rezistory - 220 Ohm, 1k Ohm, 10k Ohm vodiče (drôty) Zapojenie: V tejto časti budem vysvetľovať zapojenie. Schému som vytvoril na stránke https://app.cirkitdesigner.com. Túto stránku som zvolil preto, lebo mala dostupné presnie tie elektrické komponenty, ktoré som použil.\n",
+  "keywords": [
+    
+  ],
+  "articleBody": "Mini projekt zameraný na elektroniku a programovanie Arduina Zadaním tohoto projektu bolo vytvoriť jednoduchý program, ktorý bude vykonávať nejakú funkciu. Ja som sa rozhodol tento projekt skombinovať s mini-projektom 5 - 3D tlač. Plánoval som poháňať môj vytlačený 12 valcový model spaľovacieho motora pomocou elektromotora. Taktiež som chcel aby bolo možné regulovať jeho otáčky a aby sa zobrazovali na displeji.\nKomponenty: Na tento projekt som využil tieto súčiastky:\nkrokový motor typu NEMA17 riadiaca doska pre krokové motory (Mikrostep driver) Arduino uno LCD displej bez nadstavby (shieldu) 2x rotačný enkóder typu KY-040 napájací zdroj 24V - pre driver a krokový motor rezistory - 220 Ohm, 1k Ohm, 10k Ohm vodiče (drôty) Zapojenie: V tejto časti budem vysvetľovať zapojenie. Schému som vytvoril na stránke https://app.cirkitdesigner.com. Túto stránku som zvolil preto, lebo mala dostupné presnie tie elektrické komponenty, ktoré som použil.\nZapojenie je celkom zložité, preto je celé dostupné na stránke: https://app.cirkitdesigner.com/project/fcb505d5-ba25-4acf-94c2-e7bc1970280e. Poskytujem aj tabuľky zapojenia:\nArduino: Komponent Označenie pinu Komponent 2 Označenie pinu 2 Ardunino D3 Driver PUL+ - D4 - DIR+ - D5 - ENA+ - D9 Breadboard 27 RS - D10 - 25 - D11 - 20 - D12 - 19 - D13 - 18 - A0 - 17 - GND1 Breadboard Modrá (-) - 5V - Červená (+) - GND2 WAGO spojka 1 Driver: Komponent Označenie pinu Komponent 2 Označenie pinu 2 Driver VCC Zdroj +24V - GND - GND - A+ Krokový motor A - A- - C - B+ - B - B- - D - PUL- WAGO spojka 2 - DIR- WAGO spojka 3 - ENA- WAGO spojka 4 Breadboard/displej: Komponent Označenie pinu Komponent 2 Označenie pinu 2 Breadboard 30 VSS Breadboard Modrá (-) - 29 VDD - Červená (+) - 28 VO - 9 - 9 - 10k Ohm - Červená (+) - 9 - 1k Ohm - Modrá (-) - 26 R_S - Modrá (-) - 16 A - 220 Ohm - Čevená(+) - 15 K - Modrá (-) Ovládací enkóder: Komponent Označenie pinu Komponent 2 Označenie pinu 2 Enkóder CLK Arduino D6 - DT - D7 - SW - D8 - + Breadboard Červená (+) - GND - Modrá (-) Merací enkóder: Komponent Označenie pinu Komponent 2 Označenie pinu 2 Enkóder CLK Arduino A1 - DT - A2 - + Breadboard Červená (+) - GND - Modrá (-) Vysvetlenie zapojenia: Zapojenie vysvetlím rašej po častiach.\nMicrostep Driver VCC a GND sú + a - pre napájanie zo zdroja 24V. A+, A-, B+, B- sú piny na ovládanie motora. PUL je signál z arduina (pulzy) pre otáčanie motora. DIR je pre ovládanie smeru otáčania motora. ENA je pre aktiváciu motora. Displej Keďže displej nemal dodatočnú nadstavbu I2C tak bolo potrebné zapojiť viacej pinov. Ak by mal aj I2C jednotku bolo by zapojenie jednoduchšie. Zapojenie: VSS je mínus. VDD je napájanie. VO je pin pre nastavenie kontrastu textu displeja. Toto by normálne spravovala jednotka I2C ale tú bohužiaľ nemám k dispozícii. Bolo potrebné na tento pin priviesť cca 0,5V, čo má byť ideálny kontrast pre túto aplikáciu. Preto som využil rezistory (10k Ohm a 1k Ohm) a vytvoril tak delič napätia. RS je register select. R_W používam iba zápis takže ide na GND. E je enable - zapnutie displeja. D4 až D7 sú digitálne piny pre zobrazovanie textu. Zapájajú sa priamo do arduina. A je napájanie pre podsvietenie displeja. Je tu daný 220 Ohmový rezistor pre zníženie jasu. K je zemnenie pre podsvietenie takže ide do GND. Ovládací enkóder Pomocou tohto enkódera sa ovládajú otáčky, smer a zapnutie/vypnutie krokového motora. Otáčaním doprava sa otáčky zvyšujú a doľava znižujú. Stlačením sa prepína smer otáčania a dlhým podržaním sa motor vypne.\nMerací enkóder Slúži na merania otáčok za minútu, keďže jeho jedna celá otáčka pozostáva z 20 polôh. Je zapojený podobne ako ovládací enkóder.\nKód: Kód je dostupný na tomto linku: 📥 Stiahnuť Arduino kód\nVýsledok: Tento projekt sa mi podaril celkom dobre. Je tu stále miesto na zlepšenie, napríklad: I2C modul pre displej alebo presnejšie meranie otáčok. Nepresnosť otáčok som spočítal a je približne 0-7 RPM, čo nie až také zlé ale mohlo byť lepšie. S projektom som ale celkom spokojný, všetko funguje tak ako má. Jediné čo by som vytkol je trošku zložité zapájanie, keďže bolo potrebné využiť veľa pinov arduina.\nVideo: ",
+  "wordCount" : "707",
+  "inLanguage": "en",
+  "datePublished": "2025-09-28T19:52:30+02:00",
+  "dateModified": "2025-09-28T19:52:30+02:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://268026-oss.github.io/268026_ZPC_2025/projects/project6/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ZPC projekt",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://268026-oss.github.io/268026_ZPC_2025/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://268026-oss.github.io/268026_ZPC_2025/" accesskey="h" title="ZPC projekt (Alt + H)">ZPC projekt</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://268026-oss.github.io/268026_ZPC_2025/" title="Domov">
+                    <span>Domov</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://268026-oss.github.io/268026_ZPC_2025/about/" title="O mne">
+                    <span>O mne</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://268026-oss.github.io/268026_ZPC_2025/projects/" title="Projekty">
+                    <span>Projekty</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Mini-projekt 6 - Arduino/elektronika
+    </h1>
+    <div class="post-meta"><span title='2025-09-28 19:52:30 +0200 CEST'>September 28, 2025</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h1 id="mini-projekt-zameraný-na-elektroniku-a-programovanie-arduina">Mini projekt zameraný na elektroniku a programovanie Arduina<a hidden class="anchor" aria-hidden="true" href="#mini-projekt-zameraný-na-elektroniku-a-programovanie-arduina">#</a></h1>
+<p>    Zadaním tohoto projektu bolo vytvoriť jednoduchý program, ktorý bude vykonávať nejakú funkciu. Ja som sa rozhodol tento projekt skombinovať s mini-projektom 5 - 3D tlač. Plánoval som poháňať môj vytlačený 12 valcový model spaľovacieho motora pomocou elektromotora. Taktiež som chcel aby bolo možné regulovať jeho otáčky a aby sa zobrazovali na displeji.</p>
+<h2 id="komponenty">Komponenty:<a hidden class="anchor" aria-hidden="true" href="#komponenty">#</a></h2>
+<p>Na tento projekt som využil tieto súčiastky:</p>
+<ul>
+<li>krokový motor typu NEMA17</li>
+<li>riadiaca doska pre krokové motory (Mikrostep driver)</li>
+<li>Arduino uno</li>
+<li>LCD displej bez nadstavby (shieldu)</li>
+<li>2x rotačný enkóder typu KY-040</li>
+<li>napájací zdroj 24V - pre driver a krokový motor</li>
+<li>rezistory - 220 Ohm, 1k Ohm, 10k Ohm</li>
+<li>vodiče (drôty)</li>
+</ul>
+<h2 id="zapojenie">Zapojenie:<a hidden class="anchor" aria-hidden="true" href="#zapojenie">#</a></h2>
+<p>    V tejto časti budem vysvetľovať zapojenie. Schému som vytvoril na stránke <a href="https://app.cirkitdesigner.com">https://app.cirkitdesigner.com</a>. Túto stránku som zvolil preto, lebo mala dostupné presnie tie elektrické komponenty, ktoré som použil.</p>
+<p><img alt="Cirkit" loading="lazy" src="/268026_ZPC_2025/images/cirkit.png"></p>
+<p>Zapojenie je celkom zložité, preto je celé dostupné na stránke: <a href="https://app.cirkitdesigner.com/project/fcb505d5-ba25-4acf-94c2-e7bc1970280e">https://app.cirkitdesigner.com/project/fcb505d5-ba25-4acf-94c2-e7bc1970280e</a>.
+Poskytujem aj tabuľky zapojenia:</p>
+<h2 id="arduino">Arduino:<a hidden class="anchor" aria-hidden="true" href="#arduino">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Komponent</th>
+          <th style="text-align: center">Označenie pinu</th>
+          <th style="text-align: center">Komponent 2</th>
+          <th style="text-align: center">Označenie pinu 2</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Ardunino</td>
+          <td style="text-align: center">D3</td>
+          <td style="text-align: center">Driver</td>
+          <td style="text-align: center">PUL+</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-</td>
+          <td style="text-align: center">D4</td>
+          <td style="text-align: center">-</td>
+          <td style="text-align: center">DIR+</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-</td>
+          <td style="text-align: center">D5</td>
+          <td style="text-align: center">-</td>
+          <td style="text-align: center">ENA+</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-</td>
+          <td style="text-align: center">D9</td>
+          <td style="text-align: center">Breadboard</td>
+          <td style="text-align: center">27 RS</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-</td>
+          <td style="text-align: center">D10</td>
+          <td style="text-align: center">-</td>
+          <td style="text-align: center">25</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-</td>
+          <td style="text-align: center">D11</td>
+          <td style="text-align: center">-</td>
+          <td style="text-align: center">20</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-</td>
+          <td style="text-align: center">D12</td>
+          <td style="text-align: center">-</td>
+          <td style="text-align: center">19</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-</td>
+          <td style="text-align: center">D13</td>
+          <td style="text-align: center">-</td>
+          <td style="text-align: center">18</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-</td>
+          <td style="text-align: center">A0</td>
+          <td style="text-align: center">-</td>
+          <td style="text-align: center">17</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-</td>
+          <td style="text-align: center">GND1</td>
+          <td style="text-align: center">Breadboard</td>
+          <td style="text-align: center">Modrá (-)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-</td>
+          <td style="text-align: center">5V</td>
+          <td style="text-align: center">-</td>
+          <td style="text-align: center">Červená (+)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-</td>
+          <td style="text-align: center">GND2</td>
+          <td style="text-align: center">WAGO spojka</td>
+          <td style="text-align: center">1</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="driver">Driver:<a hidden class="anchor" aria-hidden="true" href="#driver">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Komponent</th>
+          <th style="text-align: center">Označenie pinu</th>
+          <th style="text-align: center">Komponent 2</th>
+          <th style="text-align: center">Označenie pinu 2</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Driver</td>
+          <td style="text-align: center">VCC</td>
+          <td style="text-align: center">Zdroj</td>
+          <td style="text-align: center">+24V</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-</td>
+          <td style="text-align: center">GND</td>
+          <td style="text-align: center">-</td>
+          <td style="text-align: center">GND</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-</td>
+          <td style="text-align: center">A+</td>
+          <td style="text-align: center">Krokový motor</td>
+          <td style="text-align: center">A</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-</td>
+          <td style="text-align: center">A-</td>
+          <td style="text-align: center">-</td>
+          <td style="text-align: center">C</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-</td>
+          <td style="text-align: center">B+</td>
+          <td style="text-align: center">-</td>
+          <td style="text-align: center">B</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-</td>
+          <td style="text-align: center">B-</td>
+          <td style="text-align: center">-</td>
+          <td style="text-align: center">D</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-</td>
+          <td style="text-align: center">PUL-</td>
+          <td style="text-align: center">WAGO spojka</td>
+          <td style="text-align: center">2</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-</td>
+          <td style="text-align: center">DIR-</td>
+          <td style="text-align: center">WAGO spojka</td>
+          <td style="text-align: center">3</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-</td>
+          <td style="text-align: center">ENA-</td>
+          <td style="text-align: center">WAGO spojka</td>
+          <td style="text-align: center">4</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="breadboarddisplej">Breadboard/displej:<a hidden class="anchor" aria-hidden="true" href="#breadboarddisplej">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Komponent</th>
+          <th style="text-align: center">Označenie pinu</th>
+          <th style="text-align: center">Komponent 2</th>
+          <th style="text-align: center">Označenie pinu 2</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Breadboard</td>
+          <td style="text-align: center">30 VSS</td>
+          <td style="text-align: center">Breadboard</td>
+          <td style="text-align: center">Modrá (-)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-</td>
+          <td style="text-align: center">29 VDD</td>
+          <td style="text-align: center">-</td>
+          <td style="text-align: center">Červená (+)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-</td>
+          <td style="text-align: center">28 VO</td>
+          <td style="text-align: center">-</td>
+          <td style="text-align: center">9</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-</td>
+          <td style="text-align: center">9</td>
+          <td style="text-align: center">-</td>
+          <td style="text-align: center">10k Ohm - Červená (+)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-</td>
+          <td style="text-align: center">9</td>
+          <td style="text-align: center">-</td>
+          <td style="text-align: center">1k Ohm - Modrá (-)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-</td>
+          <td style="text-align: center">26 R_S</td>
+          <td style="text-align: center">-</td>
+          <td style="text-align: center">Modrá (-)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-</td>
+          <td style="text-align: center">16 A</td>
+          <td style="text-align: center">-</td>
+          <td style="text-align: center">220 Ohm - Čevená(+)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-</td>
+          <td style="text-align: center">15 K</td>
+          <td style="text-align: center">-</td>
+          <td style="text-align: center">Modrá (-)</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="ovládací-enkóder">Ovládací enkóder:<a hidden class="anchor" aria-hidden="true" href="#ovládací-enkóder">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Komponent</th>
+          <th style="text-align: center">Označenie pinu</th>
+          <th style="text-align: center">Komponent 2</th>
+          <th style="text-align: center">Označenie pinu 2</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Enkóder</td>
+          <td style="text-align: center">CLK</td>
+          <td style="text-align: center">Arduino</td>
+          <td style="text-align: center">D6</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-</td>
+          <td style="text-align: center">DT</td>
+          <td style="text-align: center">-</td>
+          <td style="text-align: center">D7</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-</td>
+          <td style="text-align: center">SW</td>
+          <td style="text-align: center">-</td>
+          <td style="text-align: center">D8</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-</td>
+          <td style="text-align: center">+</td>
+          <td style="text-align: center">Breadboard</td>
+          <td style="text-align: center">Červená (+)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-</td>
+          <td style="text-align: center">GND</td>
+          <td style="text-align: center">-</td>
+          <td style="text-align: center">Modrá (-)</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="merací-enkóder">Merací enkóder:<a hidden class="anchor" aria-hidden="true" href="#merací-enkóder">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Komponent</th>
+          <th style="text-align: center">Označenie pinu</th>
+          <th style="text-align: center">Komponent 2</th>
+          <th style="text-align: center">Označenie pinu 2</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Enkóder</td>
+          <td style="text-align: center">CLK</td>
+          <td style="text-align: center">Arduino</td>
+          <td style="text-align: center">A1</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-</td>
+          <td style="text-align: center">DT</td>
+          <td style="text-align: center">-</td>
+          <td style="text-align: center">A2</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-</td>
+          <td style="text-align: center">+</td>
+          <td style="text-align: center">Breadboard</td>
+          <td style="text-align: center">Červená (+)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-</td>
+          <td style="text-align: center">GND</td>
+          <td style="text-align: center">-</td>
+          <td style="text-align: center">Modrá (-)</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="vysvetlenie-zapojenia">Vysvetlenie zapojenia:<a hidden class="anchor" aria-hidden="true" href="#vysvetlenie-zapojenia">#</a></h2>
+<p>Zapojenie vysvetlím rašej po častiach.</p>
+<ol>
+<li>Microstep Driver</li>
+</ol>
+<ul>
+<li>VCC a GND sú + a - pre napájanie zo zdroja 24V.</li>
+<li>A+, A-, B+, B- sú piny na ovládanie motora.</li>
+<li>PUL je signál z arduina (pulzy) pre otáčanie motora.</li>
+<li>DIR je pre ovládanie smeru otáčania motora.</li>
+<li>ENA je pre aktiváciu motora.</li>
+</ul>
+<ol start="2">
+<li>Displej
+Keďže displej nemal dodatočnú nadstavbu I2C tak bolo potrebné zapojiť viacej pinov. Ak by mal aj I2C jednotku bolo by zapojenie jednoduchšie. Zapojenie:</li>
+</ol>
+<ul>
+<li>VSS je mínus.</li>
+<li>VDD je napájanie.</li>
+<li>VO je pin pre nastavenie kontrastu textu displeja. Toto by normálne spravovala jednotka I2C ale tú bohužiaľ nemám k dispozícii. Bolo potrebné na tento pin priviesť cca 0,5V, čo má byť ideálny kontrast pre túto aplikáciu. Preto som využil rezistory (10k Ohm a 1k Ohm) a vytvoril tak delič napätia.</li>
+<li>RS je register select.</li>
+<li>R_W používam iba zápis takže ide na GND.</li>
+<li>E je enable - zapnutie displeja.</li>
+<li>D4 až D7 sú digitálne piny pre zobrazovanie textu. Zapájajú sa priamo do arduina.</li>
+<li>A je napájanie pre podsvietenie displeja. Je tu daný 220 Ohmový rezistor pre zníženie jasu.</li>
+<li>K je zemnenie pre podsvietenie takže ide do GND.</li>
+</ul>
+<ol start="3">
+<li>
+<p>Ovládací enkóder
+Pomocou tohto enkódera sa ovládajú otáčky, smer a zapnutie/vypnutie krokového motora. Otáčaním doprava sa otáčky zvyšujú a doľava znižujú. Stlačením sa prepína smer otáčania a dlhým podržaním sa motor vypne.</p>
+</li>
+<li>
+<p>Merací enkóder
+Slúži na merania otáčok za minútu, keďže jeho jedna celá otáčka pozostáva z 20 polôh. Je zapojený podobne ako ovládací enkóder.</p>
+</li>
+</ol>
+<h2 id="kód">Kód:<a hidden class="anchor" aria-hidden="true" href="#kód">#</a></h2>
+<p>Kód je dostupný na tomto linku:
+📥 <a href="/268026_ZPC_2025/files/KodPreMotor.ino">Stiahnuť Arduino kód</a></p>
+<h2 id="výsledok">Výsledok:<a hidden class="anchor" aria-hidden="true" href="#výsledok">#</a></h2>
+<p>    Tento projekt sa mi podaril celkom dobre. Je tu stále miesto na zlepšenie, napríklad: I2C modul pre displej alebo presnejšie meranie otáčok. Nepresnosť otáčok som spočítal a je približne 0-7 RPM, čo nie až také zlé ale mohlo byť lepšie. S projektom som ale celkom spokojný, všetko funguje tak ako má. Jediné čo by som vytkol je trošku zložité zapájanie, keďže bolo potrebné využiť veľa pinov arduina.</p>
+<h2 id="video">Video:<a hidden class="anchor" aria-hidden="true" href="#video">#</a></h2>
+<video controls width="640">
+  <source src="/268026_ZPC_2025/videos/videomotor.mp4" type="video/mp4">
+</video>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://268026-oss.github.io/268026_ZPC_2025/">ZPC projekt</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

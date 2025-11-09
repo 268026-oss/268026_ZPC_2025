@@ -1,0 +1,37 @@
+baseURL = 'https://268026-oss.github.io/268026_ZPC_2025/'
+languageCode = 'cz-cs'
+title = 'ZPC projekt'
+theme = "PaperMod"
+
+
+[params]
+
+# hugo.toml / config.toml
+[markup.goldmark.renderer]
+unsafe = true
+
+[[menu.main]]
+identifier = "projects"
+name = "Projects"
+url = "/projects/"
+weight = 3
+
+[menu]
+
+  [[menu.main]]
+  identifier = "home"
+  name = "Domov"
+  url = "/"
+  weight = 1
+
+  [[menu.main]]
+  identifier = "about"
+  name = "O mne"
+  url = "/about/"
+  weight = 2
+
+  [[menu.main]]
+  identifier = "projects"
+  name = "Projekty"
+  url = "/projects/"
+  weight = 3
