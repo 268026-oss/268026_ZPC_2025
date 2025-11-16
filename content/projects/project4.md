@@ -21,7 +21,7 @@ SimScan poskytuje:
 
 <img src="/268026_ZPC_2025/images/flasastock.jpg" alt="Flasastock" style="display:block; margin: 0 auto; width:60%;">
 
-&nbsp;&nbsp;&nbsp;&nbsp;Potom som skener prepol do režimu zbierania dát povrchu. Nastavil som parametre ktoré boli aj v prezantácii pri školení dostupné na: https://www.strojlab.cz/scan-lab. Na tejto stránke je podrobne opísaný celý postup aj s nastaveniami. Jediný parameter, ktorý som zmenil bol resolution (rozlíšenie) a to z hodnoty 0,5mm na 0,3mm. Bolo to kvôli tomu lebo som chcel mať trošku viacej detailný povrch. Taktiež som nastavil, že budem skenovať small object shiny/dark (malé objekty lesklé alebo tmavé), kde bola expozícia 7.
+&nbsp;&nbsp;&nbsp;&nbsp;Potom som skener prepol do režimu zbierania dát povrchu. Nastavil som parametre ktoré boli aj v prezantácii pri školení dostupné na: https://www.strojlab.cz/scan-lab. Na tejto stránke je podrobne opísaný celý postup aj s nastaveniami. Parametre, ktoré som zmenil bol resolution (rozlíšenie) a to z hodnoty 0,5mm na 0,3mm. Bolo to kvôli tomu lebo som chcel mať trošku viacej detailný povrch. Taktiež som nastavil, že budem skenovať small object shiny/dark (malé objekty lesklé alebo tmavé), kde bola expozícia 7.
 
 &nbsp;&nbsp;&nbsp;&nbsp;Pri tomto druhom kroku skenovania som ale narazil na problém. Tým že tá sklenená fľaša bola lesklá a k tomu aj tmavá (hnedé tmavé sklo), tak mi skener nechcel dobre zachytávať povrch a laserové lúče sa rozptyľovali v skle. Rozhodol som sa pre to, že použijem špeciálny 3D skenovací matný sprej, ktorý na fľaši vytvorí matnú vrstvu a zlepší skenovanie.
 
@@ -46,7 +46,7 @@ Po naskenovaní povrchu som fľašu otočil a oskenoval druhým skenom povrchu s
 | Hrdlo fľaše | 17,74 mm | 17,6 mm | +0,14 |
 | Výška | 226,14 mm | 226,3 mm | -0,16 |
 
-&nbsp;&nbsp;&nbsp;&nbsp;Hodnoty meraní nie sú úplne najpresnejšie. Je to hlavne kvôli tomu, že fľaša nemá presné rozmery. Takže je možné, že pri ručnom meraní vznikla odýchlka. Tiež tu hrá rolu to, že fľaša má veľmi oblú geometriu a je lesklá. Napriek tomu si myslím, že namerané hodnoty dávajú zmysel, pri výrobe takýchto fľiaš je tolerancia omnoho vyššia. Je tiež možné, že osa stredu fľaše je mierne vychýlená od spodku po vrch.
+&nbsp;&nbsp;&nbsp;&nbsp;Hodnoty meraní nie sú úplne najpresnejšie. Je to hlavne kvôli tomu, že fľaša nemá presné rozmery. Takže je možné, že pri ručnom meraní vznikla odýchlka. Tiež tu hrá rolu to, že fľaša má veľmi oblú geometriu a je lesklá. Napriek tomu si myslím, že namerané hodnoty dávajú zmysel, pri výrobe takýchto fľiaš je tolerancia tiež celkom veľká. Je tiež možné, že osa stredu fľaše je mierne vychýlená od spodku po vrch.
 
 ## Obrázok z GOM Inspect upravnený a nameraný:
 ![GOM](/268026_ZPC_2025/images/GOM.png)

@@ -20,7 +20,7 @@ Fotka programu:
 # Fotka plotteru:
 ![Ploter Foto](/268026_ZPC_2025/images/ploterfoto.jpg)
 
-&nbsp;&nbsp;&nbsp;&nbsp;Po vyrezaní  fólie bolo nutné ešte ručne odstrániť materiál, ktorý nie je súčasťou obrázku. Použili sme na to odlamovací nôž, skalpel, nožnice a veľa trpezlivosti/presnosti :). Na obrázku je pekne vidno ako plotter vyrezal čiary
+&nbsp;&nbsp;&nbsp;&nbsp;Po vyrezaní fólie bolo nutné ešte ručne odstrániť materiál, ktorý nie je súčasťou obrázku. Použili sme na to odlamovací nôž, skalpel, nožnice a veľa trpezlivosti/presnosti :). Na obrázku je pekne vidno ako plotter vyrezal čiary
 
 # Vyrezaná fólia vyzerala takto:
 ![Folia Cista](/268026_ZPC_2025/images/folianecut.jpg)

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Vitajte na mojej stránke! on ZPC projekt</title>
+    <title>Úvod ZPC projektu on ZPC projekt</title>
     <link>https://268026-oss.github.io/268026_ZPC_2025/</link>
-    <description>Recent content in Vitajte na mojej stránke! on ZPC projekt</description>
+    <description>Recent content in Úvod ZPC projektu on ZPC projekt</description>
     <generator>Hugo -- 0.148.2</generator>
     <language>cz-cs</language>
     <lastBuildDate>Sun, 28 Sep 2025 19:52:30 +0200</lastBuildDate>
@@ -21,10 +21,10 @@
       <link>https://268026-oss.github.io/268026_ZPC_2025/projects/project1/</link>
       <pubDate>Sun, 28 Sep 2025 19:52:26 +0200</pubDate>
       <guid>https://268026-oss.github.io/268026_ZPC_2025/projects/project1/</guid>
-      <description>&lt;h1 id=&#34;vytvorba-webovej-stránky-s-portfóliom&#34;&gt;Vytvorba webovej stránky s portfóliom&lt;/h1&gt;
+      <description>&lt;h1 id=&#34;tvorba-webovej-stránky-s-portfóliom&#34;&gt;Tvorba webovej stránky s portfóliom&lt;/h1&gt;
 &lt;p&gt;Prvým zadaním bolo vytvoriť webovú stránku kde budeme postovať naše projekty.&lt;/p&gt;
-&lt;p&gt;    Táto webová stránka je vytvorená pomocou Huga, čo je statický generátor stránok. Stránka sa upravuje pomocou kódu vo visual studiu, kde sa dá všetko nastavovať a spravovať podľa potreby. Web je nahraný na GitHub Pages, je to kvôli tomu aby bol dostupný online a taktiež aby bola dostupná moja dokumentácia počas celého semestra.&lt;/p&gt;
-&lt;p&gt;    Bolo to celkom náročné, keďže programovanie sme doteraz v rámmci výuky nemali, preto bolo nutné si niektoré infromácie dohľadať a dokonca si pozrieť zopár tutoriálov.&lt;/p&gt;</description>
+&lt;p&gt;    Táto webová stránka je vytvorená pomocou Hugo, čo je statický generátor stránok. Stránka sa upravuje pomocou kódu vo visual studiu, kde sa dá všetko nastavovať a spravovať podľa potreby. Web je nahraný na GitHub Pages. Je to kvôli tomu aby bol dostupný online a taktiež aby bola dostupná moja dokumentácia počas celého semestra.&lt;/p&gt;
+&lt;p&gt;    Kódovanie stránky bolo celkom náročné, keďže programovanie sme doteraz v rámmci výuky nemali, preto bolo nutné si niektoré infromácie dohľadať a pozrieť si zopár tutoriálov :).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Mini-projekt 2 - Plotter</title>

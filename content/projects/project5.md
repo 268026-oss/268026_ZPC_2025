@@ -26,7 +26,7 @@ weight = 5
 ## Po vytlačení:
 ![Motortlac](/268026_ZPC_2025/images/motorvytlaceny.jpg)
 
-&nbsp;&nbsp;&nbsp;&nbsp;Po vytlačení som odstárnil podpory, mierne obrúsil pár nedostatkov a namazal pohyblivé časti. Následne som začal celý model skladať. Tento krok bol celkom náročný, pretože viacero komponentov sa muselo skladať naraz a motor je pomerne malý - je tam málo miesta. Po zložení motora som pridal na jednu stranu motora steper motor s vytlačeným ozubeným kolesom a na druhú rotačný enkóder.
+&nbsp;&nbsp;&nbsp;&nbsp;Po vytlačení som odstárnil podpory, mierne obrúsil pár nedostatkov a namazal pohyblivé časti. Následne som začal celý model skladať. Tento krok bol celkom náročný, pretože viacero komponentov sa muselo skladať naraz a motor je pomerne malý - je tam málo miesta. Po zložení motora som pridal na jednu stranu motora steper motor s vytlačeným ozubeným kolesom a na druhú rotačný enkóder. Celkovo som využil približne 109g filamentu.
 
 ## Výsledný model:
 ![Motorkomplet](/268026_ZPC_2025/images/motorkomplet.jpg)

@@ -1,6 +1,6 @@
 +++
-title = "Vitajte na mojej stránke!"
-description = "Toto je popis mojej úvodnej stránky, ktorý sa zobrazí vo výsledkoch vyhľadávania."
+title = "Úvod ZPC projektu"
+description = "Čo obsahuje predmet ZPC a čo je jeho zmysel"
 type = "home" 
 +++
 
@@ -16,6 +16,7 @@ V kurze je pripravených 5 mini-projektov, ktoré musíme spracovať. Týkajú s
 - laserové rezanie, rezanie vinylových fólií, 3D skenovanie, 3D tlač, finišovanie 
 - základy elektroniky, senzoriky a programovania mikrokontrolerov
 - dokumentácia vlastných projektov
+- úvod do obrábania CNC
 
 Cieľom predmetu je:
 Rozvíjať kreativitu a praktické zručnosti pri návrhu a výrobe prototypov v multidisciplinárnom prostredí.
