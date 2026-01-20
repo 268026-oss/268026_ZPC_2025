@@ -5,6 +5,8 @@ theme = "PaperMod"
 
 
 [params]
+  customCSS = ["css/custom.css"]
+
 
 # hugo.toml / config.toml
 [markup.goldmark.renderer]

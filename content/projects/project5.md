@@ -2,7 +2,7 @@
 date = '2025-09-28T19:52:30+02:00'
 draft = false
 title = 'Mini-projekt 5 - 3D tlač'
-weight = 5
+weight = 6
 +++
 
 # Mini projekt na 3D tlač

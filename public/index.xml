@@ -14,7 +14,7 @@
       <pubDate>Sun, 28 Sep 2025 19:52:30 +0200</pubDate>
       <guid>https://268026-oss.github.io/268026_ZPC_2025/projects/projektsemester/</guid>
       <description>&lt;p&gt;    V rámci výuky je aj semestrálny projekt. Tému pre tento projekt si volíme sami na základe tématiky Jak vyrobit (téměř) cokoliv - How to make (almost) anything. Tento projekt by mal obsahovať prvky 3D tlače, laserového rezania a elektroniky (arduino).&lt;/p&gt;
-&lt;p&gt;    Ja som si za tému zvolil systém pre elektronické terče. Ide o systém, ktorý bude riadiť svetlá (červené a zelené) na terčoch a bude tým signalizovať kedy strelci majú strielať a kedy nie. Bude sa to využívať najmä pri rýchlopalných disciplínach kedy majú strelci len pár sekúnd na výstrel. Okrem prepínania svetiel bude mať systém aj rozpoznávanie neplatného výstrelu - ak bude výstrel mimo času, kedy je povolený (mimo zelené svetlo).&lt;/p&gt;</description>
+&lt;p&gt;    Ja som si za tému zvolil systém pre elektronické terče. Ide o systém, ktorý bude riadiť svetlá (červené a zelené) na terčoch a bude tým signalizovať kedy strelci majú strielať a kedy nie. Bude sa to využívať najmä pri rýchlopalných disciplínach kedy majú strelci len pár sekúnd na výstrel. Okrem prepínania svetiel bude mať systém aj rozpoznávanie neplatného výstrelu - ak bude výstrel mimo času, kedy je povolený (mimo zelené svetlo). Je to teda nástroj, ktorý bude riadiť strelcov a informovať rozhodcu (obsluha tohto zariadenia).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Mini-projekt 1 - Web stránka</title>

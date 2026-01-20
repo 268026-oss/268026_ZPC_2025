@@ -2,7 +2,7 @@
 date = '2025-09-28T19:52:30+02:00'
 draft = false
 title = 'Mini-projekt 6 - Arduino/elektronika'
-weight = 6
+weight = 7
 +++
 
 # Mini projekt zameraný na elektroniku a programovanie Arduina
